@@ -1,5 +1,6 @@
 import React from "react";
 import "./FeaturedVideo.scss";
+import { FaPlay } from "react-icons/fa6";
 
 import titleImg from "./../../assets/FeaturedTitleImage.png";
 
@@ -20,7 +21,7 @@ const FeaturedVideo = ({ featured }) => {
       {featured && (
         <div className="data-container">
           <p>{featured.Category}</p>
-          <img src={titleImg} alt="" />
+          <img src={titleImg} alt="titleImg" />
           <div className="movie-details">
             <span>{featured.ReleaseYear}</span>
             <span>{featured.MpaRating}</span>
@@ -28,8 +29,11 @@ const FeaturedVideo = ({ featured }) => {
           </div>
           <div className="movie-description">{featured.Description}</div>
           <div className="control-buttons">
-            <button className="Play">Play</button>
-            <button className="More Info">More Info</button>
+            <button className="play-btn">
+              <FaPlay />
+              <span>Play</span>
+            </button>
+            <button className="more-info-btn">More Info</button>
           </div>
         </div>
       )}

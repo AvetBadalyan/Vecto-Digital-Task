@@ -5,6 +5,7 @@
     width: calc(100vw - 160px);
     background-color: transparent;
     color: white;
+    font-size: 2rem;
 
     .movie-carousel {
         width: 100%;
@@ -23,7 +24,8 @@
 
         img {
             width: 200px;
-            height: 278px;
+            height: 25vh;
+            max-height: 296px;
         }
     }
 }
