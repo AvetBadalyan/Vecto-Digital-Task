@@ -3,9 +3,9 @@
 }
 
 .vertical-nav {
-    width: 100px;
-    height: 100%;
-    background-color: black;
+    width: 160px;
+    height: 100vh;
+    background-color: #040404;
     position: absolute;
     top: 0;
     left: 0;
@@ -14,9 +14,10 @@
     z-index: 9999;
     display: flex;
     justify-content: center;
+    color: #F1F1F1;
 
     &:hover {
-        width: 200px;
+        width: 350px;
         z-index: 9999;
 
         .nav-links {

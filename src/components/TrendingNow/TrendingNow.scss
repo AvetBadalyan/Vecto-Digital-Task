@@ -3,4 +3,12 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    width: calc(100vw - 160px);
+
+    .movie-carousel {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
