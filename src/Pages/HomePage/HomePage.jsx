@@ -9,9 +9,10 @@ const HomePage = () => {
   const handleFeaturedChange = (movie) => {
     setFeatured(movie);
   };
+  console.log(featured, "featured");
   return (
     <div className="home-page">
-      <FeaturedVideo featuredMovie={featured} />
+      <FeaturedVideo featured={featured} />
       <TrendingNow
         handleFeaturedChange={handleFeaturedChange}
         trendingNow={data.TendingNow}

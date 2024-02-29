@@ -10,9 +10,13 @@ const FeaturedVideo = ({ featured }) => {
 
     return `${hours}h ${minutes}m`;
   }
+  console.log(featured);
 
+  const backgroundStyle = {
+    backgroundImage: `url(${featured.CoverImage})`,
+  };
   return (
-    <div className="featured-video">
+    <div className="featured-video" style={backgroundStyle}>
       {featured && (
         <div className="data-container">
           <p>{featured.Category}</p>

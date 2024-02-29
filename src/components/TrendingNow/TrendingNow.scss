@@ -1,14 +1,29 @@
 .trending-container {
-    height: 20%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     width: calc(100vw - 160px);
+    background-color: transparent;
+    color: white;
 
     .movie-carousel {
         width: 100%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        gap: 16px;
+        background-color: #040404;
+        overflow-x: auto;
+        padding-bottom: 16px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        img {
+            width: 200px;
+            height: 278px;
+        }
     }
 }
