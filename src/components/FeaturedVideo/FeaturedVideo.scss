@@ -1,0 +1,12 @@
+.featured-video {
+    background: url("./../../assets/FeaturedCoverImage.png");
+    height: 80%;
+    width: calc(100vw - 100px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
