@@ -8,14 +8,26 @@ const HomePage = () => {
   const [featured, setFeatured] = useState(data.Featured);
   const handleFeaturedChange = (movie) => {
     setFeatured(movie);
+    sessionStorage.setItem("lastClickedMovieId", movie.Id);
+
+    setTimeout(() => {
+      // logic to change background image and play video
+    }, 2000);
   };
-  console.log(featured, "featured");
+
+  const sortedMovies = [...data.TendingNow].sort((a, b) => {
+    const lastClickedMovieId = sessionStorage.getItem("lastClickedMovieId");
+    if (a.Id === lastClickedMovieId) return -1;
+    if (b.Id === lastClickedMovieId) return 1;
+    return 0;
+  });
+
   return (
     <div className="home-page">
       <FeaturedVideo featured={featured} />
       <TrendingNow
         handleFeaturedChange={handleFeaturedChange}
-        trendingNow={data.TendingNow}
+        trendingNow={sortedMovies}
       />
     </div>
   );

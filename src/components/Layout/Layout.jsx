@@ -5,10 +5,7 @@ import NavLinks from "../NavLinks/NavLinks";
 const Layout = () => {
   return (
     <div className="layout-container">
-      <nav className="vertical-nav">
-        <NavLinks />
-      </nav>
-
+      <NavLinks />
       <Outlet />
     </div>
   );

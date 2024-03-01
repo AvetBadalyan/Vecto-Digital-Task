@@ -1,31 +1,4 @@
 .layout-container {
-    position: relative;
-}
-
-.vertical-nav {
-    width: 160px;
-    height: 100vh;
-    background-color: #040404;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    z-index: 9999;
     display: flex;
-    justify-content: center;
-    color: #F1F1F1;
-
-    &:hover {
-        width: 350px;
-        z-index: 9999;
-
-        .nav-links {
-            .nav-link {
-                .label {
-                    display: block;
-                }
-            }
-        }
-    }
+    position: relative;
 }
