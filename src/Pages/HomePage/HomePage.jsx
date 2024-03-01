@@ -30,7 +30,11 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-      <FeaturedVideo featured={featured} isMovie={isMovie} />
+      <FeaturedVideo
+        featured={featured}
+        isMovie={isMovie}
+        changePicToMovie={changePicToMovie}
+      />
       <TrendingNow
         handleFeaturedChange={handleFeaturedChange}
         trendingNow={sortedMovies}

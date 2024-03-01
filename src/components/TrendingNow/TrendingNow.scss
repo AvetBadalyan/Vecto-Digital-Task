@@ -4,7 +4,7 @@
     right: 0;
     width: calc(100vw - 160px);
     background-color: transparent;
-    color: white;
+    color: #f1f1f1;
     font-size: 2rem;
 
     .movie-carousel {
@@ -14,9 +14,9 @@
         gap: 16px;
         background-color: #040404;
         overflow-x: auto;
-        padding-bottom: 16px;
         scrollbar-width: none;
         -ms-overflow-style: none;
+        padding-bottom: 1px;
 
         &::-webkit-scrollbar {
             display: none;

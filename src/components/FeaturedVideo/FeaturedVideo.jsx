@@ -2,14 +2,14 @@ import React from "react";
 import "./FeaturedVideo.scss";
 import { FaPlay } from "react-icons/fa6";
 
-const FeaturedVideo = ({ featured, isMovie }) => {
-  function formatSeconds(seconds) {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
+function formatSeconds(seconds) {
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
 
-    return `${hours}h ${minutes}m`;
-  }
+  return `${hours}h ${minutes}m`;
+}
 
+const FeaturedVideo = ({ featured, isMovie, changePicToMovie }) => {
   const backgroundStyle = {
     backgroundImage: `url(${featured.CoverImage})`,
   };
@@ -38,7 +38,7 @@ const FeaturedVideo = ({ featured, isMovie }) => {
             </div>
             <div className="movie-description">{featured.Description}</div>
             <div className="control-buttons">
-              <button className="play-btn">
+              <button className="play-btn" onClick={() => changePicToMovie()}>
                 <FaPlay />
                 <span>Play</span>
               </button>

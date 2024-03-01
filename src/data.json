@@ -10,7 +10,8 @@
     "MpaRating": "18+",
     "Category": "Movie",
     "Duration": "6000",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus tortor vel commodo consequat. Nullam vel purus eget nulla sodales efficitur. Sed nec vestibulum magna. "
+    "VideoUrl": "https://firebasestorage.googleapis.com/v0/b/vecto-task.appspot.com/o/The%20Irishman%20_%20Official%20Trailer%20_%20Netflix.mp4?alt=media&token=11e7209a-c302-4a5c-a23c-95f5d90b5a89",
+    "Description": "The Irishman is a riveting crime drama directed by Martin Scorsese, released in 2021. Set against the backdrop of organized crime, the film follows the life of Frank Sheeran, portrayed by Robert De Niro, as he navigates through the world of the mafia"
   },
   "TendingNow": [
     {
@@ -18,7 +19,7 @@
       "Title": "The Good Doctor",
       "CoverImage": "https://firebasestorage.googleapis.com/v0/b/vecto-task.appspot.com/o/good%20doctor%2Fcover.jpg?alt=media&token=6475b0be-f78a-4cb5-992f-039671b25169",
       "TitleImage": "https://firebasestorage.googleapis.com/v0/b/vecto-task.appspot.com/o/good%20doctor%2Ftitle.png?alt=media&token=c12f1756-fa88-466d-8755-1b64a3ab130a",
-      "PosterImage": "https://firebasestorage.googleapis.com/v0/b/vecto-task.appspot.com/o/good%20doctor%2Fhttps_specials-3.png?alt=media&token=15f2f56f-a438-4657-9a8d-0d0adeca8a80",
+      "PosterImage": "https://firebasestorage.googleapis.com/v0/b/vecto-task.appspot.com/o/good%20doctor%2Fhttps_specials-3.png?alt=media&token=beebe8b0-db8e-4828-b079-4568e9e45b1f",
       "Date": "2017-09-25T00:00:00.000Z",
       "ReleaseYear": "2017",
       "MpaRating": "TV-14",

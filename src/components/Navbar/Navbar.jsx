@@ -7,6 +7,7 @@ import MoviesIcon from "./../../assets/icons/Group 54.png";
 import GenresIcon from "./../../assets/icons/Group 53.png";
 import LaterIcon from "./../../assets/icons/Group 47.png";
 import User from "./../../assets/Sung-Gi-Hoon.jpg";
+import Search from "./../../assets/icons/ICON - Search.png";
 
 const navLinks = [
   { to: "/", label: "Home", icon: homeIcon },
@@ -27,6 +28,12 @@ const Navbar = () => {
             <div className="user-name">
               <span>Daniel</span>
             </div>
+          </div>
+          <div className="search-container">
+            <div className="search-icon-container">
+              <img src={Search} alt="search" />
+            </div>
+            <div className="label">Search</div>
           </div>
           <div className="nav-links">
             {navLinks.map((link, index) => (
