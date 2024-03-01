@@ -1,7 +1,7 @@
 # TV Application Web App
 
-![page]("./src/assets/1. Main - Homepage - First Screen.png")
-![page]("/src/assets/2. Homepage - Menu Open.png")
+![page](./src/assets/MainHomepageScreen.png)
+![page](/src/assets/Open.png)
 
 ## Task Description
 
