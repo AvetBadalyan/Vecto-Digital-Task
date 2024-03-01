@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import "./Layout.scss";
-import NavLinks from "../NavLinks/NavLinks";
+import Navbar from "../Navbar/Navbar";
 
 const Layout = () => {
   return (
     <div className="layout-container">
-      <NavLinks />
+      <Navbar />
       <Outlet />
     </div>
   );

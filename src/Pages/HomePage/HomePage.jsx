@@ -6,12 +6,18 @@ import data from "./../../data.json";
 
 const HomePage = () => {
   const [featured, setFeatured] = useState(data.Featured);
+  const [isMovie, setIsMovie] = useState(false);
+
+  const changePicToMovie = () => {
+    setIsMovie(true);
+  };
   const handleFeaturedChange = (movie) => {
+    setIsMovie(false);
     setFeatured(movie);
     sessionStorage.setItem("lastClickedMovieId", movie.Id);
 
     setTimeout(() => {
-      // logic to change background image and play video
+      changePicToMovie();
     }, 2000);
   };
 
@@ -24,7 +30,7 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-      <FeaturedVideo featured={featured} />
+      <FeaturedVideo featured={featured} isMovie={isMovie} />
       <TrendingNow
         handleFeaturedChange={handleFeaturedChange}
         trendingNow={sortedMovies}

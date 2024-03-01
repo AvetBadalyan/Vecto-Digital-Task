@@ -13,26 +13,24 @@
         background-color: #040404;
         z-index: 9999;
         position: fixed;
-
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         padding: 60px 38px;
         transition: all 0.3s ease-in-out;
 
         &:hover~div {
-            background: linear-gradient(90deg, #040404 35%, rgba(#040404, 0.2) 65%);
+            background: linear-gradient(90deg, rgba(4, 4, 4) 20%, rgba(#040404, 0.01) 65%);
             position: absolute;
             top: 0;
             left: 0;
-            width: 100vw;
+            width: 50vw;
             height: 100vh;
             z-index: 1;
         }
 
         &:hover {
-            width: 350px;
+            width: 388px;
 
             .profile-card,
             .footer-menu {
@@ -40,13 +38,38 @@
                 width: auto;
             }
 
+            .profile-card {
+                align-items: center;
+                margin-bottom: 18px;
+
+                .user-image {
+                    border-radius: 50%;
+                    width: 82px;
+                    height: 82px;
+                }
+
+                .user-name {
+                    font-size: 32px;
+                    font-weight: bold;
+                    color: #F1F1F1;
+                    padding: 20px;
+                }
+            }
+
+            .footer-menu {
+                flex-direction: column;
+                gap: 24px;
+                align-items: flex-start;
+            }
+
             .nav-links {
                 flex: auto;
 
                 .nav-link {
                     .label {
-                        display: block;
-                        width: auto;
+                        opacity: 1;
+                        font-size: 36px;
+                        padding: 0 20px;
                     }
                 }
             }
@@ -55,17 +78,12 @@
         .profile-card {
             display: none;
             width: 0;
-            gap: 20px;
-            padding: 20px 0;
-            color: #F1F1F1;
         }
 
         .nav-links {
             display: flex;
             color: #F1F1F1;
             flex: 1;
-
-            display: flex;
             flex-direction: column;
             gap: 18px;
             justify-content: center;
@@ -73,11 +91,10 @@
             transition: all 0.3s ease-in-out;
 
             .nav-link {
-                padding: 15px;
-                border-radius: 10px;
+                padding: 15px 0;
+                border-radius: 12px;
                 display: flex;
                 align-items: center;
-                gap: 20px;
                 text-decoration: none;
                 transition: all 0.3s ease-in-out;
                 color: #F1F1F1;
@@ -85,18 +102,26 @@
                 cursor: pointer;
 
                 &:hover {
-                    color: white;
+                    background-color: #3b486d;
                 }
 
-                .icon {
-                    width: 30px;
-                    height: 30px;
+                .nav-icon-container {
+                    width: 82px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .icon {
+                        width: 30px;
+                        height: 30px;
+                    }
                 }
 
                 .label {
-                    display: none;
-                    width: 0;
-                    margin-bottom: 4px;
+                    opacity: 0;
+                    font-size: 0;
+                    transition: all 0.3s ease-in-out;
+
                 }
             }
         }
@@ -104,20 +129,26 @@
         .footer-menu {
             display: none;
             width: 0;
-            flex-direction: column;
 
             a,
             button {
-                padding: 12px 18px;
+                padding-left: 20px;
                 text-decoration: none;
                 background: #040404;
-                color: white;
                 outline: none;
                 border: none;
+                font-size: 24px;
+                letter-spacing: 4.8px;
+                color: #858688;
+                text-transform: uppercase;
+                font-family: "Tajawal", sans-serif;
+                width: 100%;
+                text-align: left;
+                border-radius: 12px;
 
                 &:hover {
-                    background: #F1F1F1;
-                    color: #040404;
+                    color: #F1F1F1;
+                    background-color: #3b486d;
                 }
             }
         }

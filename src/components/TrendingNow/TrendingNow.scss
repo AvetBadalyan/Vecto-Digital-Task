@@ -23,9 +23,10 @@
         }
 
         img {
-            width: 200px;
             height: 25vh;
+            width: calc((100% - 7 * 16px) / 8);
             max-height: 296px;
+            min-width: 200px;
         }
     }
 }
