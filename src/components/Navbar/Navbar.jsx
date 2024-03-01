@@ -8,6 +8,14 @@ import GenresIcon from "./../../assets/icons/Group 53.png";
 import LaterIcon from "./../../assets/icons/Group 47.png";
 import User from "./../../assets/Sung-Gi-Hoon.jpg";
 
+const navLinks = [
+  { to: "/", label: "Home", icon: homeIcon },
+  { to: "/", label: "TV Shows", icon: TVIcon },
+  { to: "/", label: "Movies", icon: MoviesIcon },
+  { to: "/", label: "Genres", icon: GenresIcon },
+  { to: "/", label: "Watch Later", icon: LaterIcon },
+];
+
 const Navbar = () => {
   return (
     <nav className="vertical-nav">
@@ -21,41 +29,14 @@ const Navbar = () => {
             </div>
           </div>
           <div className="nav-links">
-            <Link to="/" className="nav-link">
-              <div className="nav-icon-container">
-                <img src={homeIcon} alt="homeIcon" />
-              </div>
-
-              <div className="label">Home</div>
-            </Link>
-            <Link to="/" className="nav-link">
-              <div className="nav-icon-container">
-                <img src={TVIcon} alt="TVIcon" />
-              </div>
-
-              <div className="label">TV Shows</div>
-            </Link>
-            <Link to="/" className="nav-link">
-              <div className="nav-icon-container">
-                <img src={MoviesIcon} alt="MoviesIcon" />
-              </div>
-
-              <div className="label">Movies</div>
-            </Link>
-            <Link to="/" className="nav-link">
-              <div className="nav-icon-container">
-                <img src={GenresIcon} alt="GenresIcon" />
-              </div>
-
-              <div className="label">Genres</div>
-            </Link>
-            <Link to="/" className="nav-link">
-              <div className="nav-icon-container">
-                <img src={LaterIcon} alt="LaterIcon" />
-              </div>
-
-              <div className="label">Watch Later</div>
-            </Link>
+            {navLinks.map((link, index) => (
+              <Link to={link.to} className="nav-link" key={index}>
+                <div className="nav-icon-container">
+                  <img src={link.icon} alt={link.label} />
+                </div>
+                <div className="label">{link.label}</div>
+              </Link>
+            ))}
           </div>
         </div>
         <div className="footer-menu">
