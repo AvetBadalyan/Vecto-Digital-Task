@@ -1,3 +1,42 @@
+# TV Application Web App
+
+![page]("./src/assets/1. Main - Homepage - First Screen.png")
+![page]("/src/assets/2. Homepage - Menu Open.png")
+
+## Task Description
+
+This project involves creating a web application with a specific design focusing on TV content. The application is based on web technologies and utilizes the React.js library. The provided design includes two screens along with a data folder containing assets files such as images, videos, and a JSON data file providing necessary video data for the task.
+
+### Components:
+
+1. **Home Page**
+2. **Home Page Menu**
+
+### Details:
+
+#### 1. Main Menu with Icons
+
+The main menu is located on the left side of the screen and consists of icons for Search, Home, TV shows, movies, genres, and watch later. Upon hovering, the menu opens with an animation floating from left to right and a background translation from 0 opacity to 80. The opened view includes profile info icons with names and additional menu items at the bottom (language, get help, exit).
+
+#### 2. Main Featured Video
+
+Located at the top left of the screen, the main featured video block showcases the latest featured movie. It includes:
+
+- Video cover image
+- Category name (Movie)
+- Movie logo in transparent PNG format
+- Release year
+- MPA rating
+- Duration
+- Short description
+- Play and more info buttons
+
+#### 3. Trending Now Section
+
+This section displays trending videos with a maximum count of 50, sorted by last added or created from the JSON file. It utilizes a carousel view, showing only the first 8 elements initially. Users can scroll or drag with the mouse to view additional items from the right side. The carousel contains movie cover components.
+
+Upon clicking on any movie, the top featured section content updates with the new movie's image, category, title, and description. After 2 seconds, the featured section's background image changes to a video player in the background position without any controllers. The video associated with the clicked movie plays, utilizing the URL found in the JSON file. The movie ID is saved in session storage, ensuring that during subsequent renders (e.g., page refreshes), the movie list is sorted with the last clicked (seen) videos appearing first, followed by the remaining videos in their default order.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

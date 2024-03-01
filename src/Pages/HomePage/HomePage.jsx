@@ -4,8 +4,15 @@ import TrendingNow from "../../components/TrendingNow/TrendingNow";
 import "./HomePage.scss";
 import data from "./../../data.json";
 
+const storedId = sessionStorage.getItem("lastClickedMovieId");
+const getInitialFeaturedState = () => {
+  return storedId
+    ? data.TendingNow.find((movie) => movie.Id === storedId)
+    : data.Featured;
+};
+
 const HomePage = () => {
-  const [featured, setFeatured] = useState(data.Featured);
+  const [featured, setFeatured] = useState(getInitialFeaturedState());
   const [isMovie, setIsMovie] = useState(false);
 
   const changePicToMovie = () => {
@@ -22,7 +29,7 @@ const HomePage = () => {
   };
 
   const sortedMovies = [...data.TendingNow].sort((a, b) => {
-    const lastClickedMovieId = sessionStorage.getItem("lastClickedMovieId");
+    const lastClickedMovieId = storedId;
     if (a.Id === lastClickedMovieId) return -1;
     if (b.Id === lastClickedMovieId) return 1;
     return 0;
